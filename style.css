@@ -9,7 +9,9 @@
   --dark-gray: #7690a8;
   --gray: #efeef3;
   --light-gray: #e5eaf4;
+  --light-blue: hsla(215, 82%, 46%, 0.1);
   --dark-blue: #16133d;
+  --black: #0d0d0d;
 }
 
 /* CSS NORMALIZE */
@@ -107,10 +109,52 @@ image {
   border: 1px solid var(--dark-green);
 }
 
-/* How to create hover effect for icon? */
-/* .card-item + .card-item__icon:hover {
-    fill: var(--dark-green);
-} */
+.card-item__icon-container {
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--light-blue);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-item:hover .card-item__icon-container {
+  border: 1px solid var(--light-green);
+}
+
+.card-item:hover #building-1,
+.card-item:hover #megaphone-1,
+.card-item:hover #megaphone-2,
+.card-item:hover #megaphone-5,
+.card-item:hover #phone-1,
+.card-item:hover #phone-5,
+.card-item:hover #phone-6 {
+  fill: var(--light-green);
+}
+
+.card-item:hover #building-2,
+.card-item:hover #building-4,
+.card-item:hover #building-5,
+.card-item:hover #megaphone-4,
+.card-item:hover #megaphone-6,
+.card-item:hover #megaphone-7,
+.card-item:hover #phone-2,
+.card-item:hover #phone-4 {
+  fill: var(--middle-green);
+}
+
+.card-item:hover #building-3,
+.card-item:hover #megaphone-3,
+.card-item:hover #phone-3 {
+  fill: var(--lighten-green);
+}
+
+.card-item:hover #building-7,
+.card-item:hover #megaphone-8,
+.card-item:hover #phone-7 {
+  fill: var(--dark-green);
+}
 
 .card-item__text {
   margin: 30px 0;
@@ -154,7 +198,28 @@ image {
   column-gap: 10px;
 }
 
-/* How to add hover to icons? */
-/* .footer__socials img:hover {
-    fill: var(--dark-green);
-} */
+.socials__icons {
+  display: flex;
+  column-gap: 10px;
+}
+
+.socials__icon {
+  width: 38px;
+  height: 38px;
+  background-color: var(--gray);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--black);
+}
+
+.socials__icon:hover .icon__svg {
+  fill: var(--dark-green);
+  transition: 0.3s ease-in-out;
+}
